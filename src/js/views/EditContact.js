@@ -49,7 +49,7 @@ const EditContact = () => {
                                 ></textarea>
                             </div>
                             <button type="submit" className="btn btn ">Save</button>
-                            <Link to="/contact">
+                            <Link to="/">
                                 or get back to contacts
                             </Link>
                         </form>

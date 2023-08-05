@@ -28,10 +28,10 @@ const Modal = () => {
                         <p>Do you want to delete this contact?</p>
                     </div>
                     <div className="modal-footer">
-                        <button type="button" className="btn" style={{ background: "#B37B70" }} data-dismiss="modal" onClick={handleClose}>
+                        <button type="button" className="btn" style={{ background: "#B37B70", color: "white" }} data-dismiss="modal" onClick={handleClose}>
                             Cancel
                         </button>
-                        <button type="button" className="btn btn-danger" onClick={handleDeleteContact}>
+                        <button type="button" className="btn " style={{ background: "#8F001E", color: "white" }} onClick={handleDeleteContact}>
                             Delete contact
                         </button>
                     </div>

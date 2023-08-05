@@ -1,7 +1,6 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-
 			delContact: null,
 			newcontact: [
 				{
@@ -25,7 +24,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 					address: "53 Hogwarts",
 					mail: "LU_paper42@gmail.com",
 				},
-
 			],
 			showModal: false,
 		},
@@ -54,16 +52,21 @@ const getState = ({ getStore, getActions, setStore }) => {
 				setStore({ demo: demo });
 			},
 			addContact: (contact) => {
-				let contactlist = getStore().newcontact;
+				const store = getStore();
+				const temporalId = store.newcontact.length + 1;
+				const newcontact = [
+					...store.newcontact,
+					{
+						...contact, id: temporalId
+					},
+				];
+				setStore({ newcontact });
+				/* let contactlist = getStore().newcontact;
 				const createnewContact = {
-					id: listOfContacts.length + 1,
+					id: contactlist.length + 1,
 					...contact
 				};
-				setStore({ newcontact: [...contactlist, createnewContact] });
-			},
-			createContact: (contact) => {
-				const { name, address, phone, email } = contact;
-				getActions().addContact(contact);
+				setStore({ newcontact: [...contactlist, createnewContact] }); */
 			},
 			toggleModal: (show) => {
 				setStore({ showModal: show })

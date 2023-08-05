@@ -7,7 +7,7 @@ export const Navbar = () => {
 		<nav className="navbar navbar-light p-3 mb-3" style={{ background: "#B37B70" }}>
 			<div className="container">
 				<div className="ml-auto">
-					<Link to="/">
+					<Link to="/add-contact">
 						<button className="btn " >Add Contact</button>
 					</Link>
 				</div>
