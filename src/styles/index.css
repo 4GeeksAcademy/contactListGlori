@@ -1,3 +1,78 @@
-/* 
-    General Styles
-*/
+
+.innercolor{
+    background: #fdfbf4;
+    padding: 110px;
+    border-color: #F3D1CE;
+    border-top-width: 75px;
+    border-top-style: solid;
+    border-radius: 3%;
+    margin-top: -5%;
+    margin-right: -5%;
+    border-left-style: solid;
+    border-left-width: 15px;
+    border-right-style: solid;
+    border-right-width: 15px;
+    border-bottom-style: solid;
+    border-bottom-width: 15px;
+}
+.innercolorcontact{
+    background: #fdfbf4;
+    padding: 110px;
+    border-color: #F3D1CE;
+    border-top-width: 75px;
+    border-top-style: solid;
+    border-radius: 3%;
+    margin-top: -5%;
+    margin-right: -5%;
+    border-left-style: solid;
+    border-left-width: 15px;
+    border-right-style: solid;
+    border-right-width: 15px;
+    border-bottom-style: solid;
+    border-bottom-width: 15px;
+}
+.innercolorcontact li{
+    margin-top: 2px;
+}
+.innercolorcontact li img{
+    border-radius: 50%;
+    margin-top: 6%;
+    margin-left: 10%;
+}
+.container form button{
+    background-color: rgb(212, 179, 159);
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 19px;
+    color: #ffffff;
+}
+.container form {
+    padding: 2%;
+}
+.container form h5{
+    margin-top: 15px;
+}
+
+.contactHeader{
+    margin-top: -16%;
+    font-size: 40px;
+    color: #B37B70;
+}
+.navbar button{
+    background: #EEE4D2;
+    color: #ac6354;
+    float: right;
+}
+.outcolor {
+    padding-top: 30px;
+    margin-top: 5%;
+    background: rgb(194, 183, 175);
+    padding-left: 30px;
+    padding-bottom: 30px;
+    
+}
+.outcolor h1{
+   color: rgb(194, 129, 91);
+   margin-top: 60px;
+}
