@@ -1,21 +1,22 @@
 import React, { useState, useContext } from "react";
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { Context } from '../store/appContext';
 
 const AddContact = () => {
     const { store, actions } = useContext(Context);
+    const navigate = useNavigate();
 
     const [contact, setContact] = useState({
         name: "",
-        email: "",
         phone: "",
-        address: ""
-    })
+        address: "",
+        mail: ""
+    });
 
-    function handleSubmit(e) {
-        e.preventDefault();
+    const handleSubmit = (e) => {
         actions.addContact(contact);
-    }
+        (navigate("/"));
+    };
 
     return (
         <>
@@ -29,7 +30,7 @@ const AddContact = () => {
                         </div>
                         <h1 className='text-center'>Add a New Contact</h1>
                         <form>
-                            <div className="form-group" onSubmit={handleSubmit}>
+                            <div className="form-group" >
                                 <h5>Full Name</h5>
                                 <input
                                     type="text"
@@ -42,7 +43,7 @@ const AddContact = () => {
                             </div>
                             <div class="form-group">
                                 <h5>Email</h5>
-                                <input type="email" class="form-control" value={contact.email} id="contactmail" placeholder="Enter Email" onChange={e => setContact({ ...contact, email: e.target.value })} />
+                                <input type="email" class="form-control" value={contact.mail} id="contactmail" placeholder="Enter Email" onChange={e => setContact({ ...contact, mail: e.target.value })} />
                             </div>
                             <div className="form-group">
                                 <h5>Phone</h5>
@@ -60,7 +61,7 @@ const AddContact = () => {
                                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" placeholder="Enter Address" value={contact.address} onChange={e => setContact({ ...contact, address: e.target.value })}
                                 ></textarea>
                             </div>
-                            <button type="submit" className="btn btn ">Save</button>
+                            <button type="button" className="btn btn " onClick={handleSubmit}>Save</button>
                             <Link to="/">
                                 or get back to contacts
                             </Link>
